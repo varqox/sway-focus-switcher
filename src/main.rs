@@ -43,7 +43,7 @@ mod swaymsg {
         fn impl_next_window_to_focus<'a>(
             node: &'a node::Node,
             reversed_order: bool,
-        ) -> WindowToFocus {
+        ) -> WindowToFocus<'a> {
             use node::Node::*;
             let reduce = |nodes: &'a Vec<Node>, focused| -> WindowToFocus {
                 use WindowToFocus::*;
